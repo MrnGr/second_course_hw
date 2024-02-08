@@ -80,4 +80,10 @@
 .game__3 {
   background-image: url(img/game3.png);
   background-repeat: no-repeat;
+}
+
+@media (max-width: 1024px) {
+  .center {
+    padding-inline: calc(50% - 394px);
+  }
 }/*# sourceMappingURL=style.css.map */
