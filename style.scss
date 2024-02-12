@@ -28,7 +28,7 @@
 .usual-text {
   padding-top: 32px;
   padding-bottom: 44px;
-  width: 481px;
+  max-width: 481px;
   color: #FFF;
   font-size: 18px;
   font-weight: 400;
@@ -38,7 +38,8 @@
   color: #FFF;
   font-size: 18px;
   font-weight: 400;
-  width: 234px;
+  max-width: 234px;
+  width: 100%;
   height: 48px;
   border-radius: 30px;
   background: #9C0332;
@@ -117,8 +118,10 @@
     font-weight: 700;
   }
   &__right {
-    width: 485px;
-    height: 333px;
+    max-width: 485px;
+    width: 100%;
+    aspect-ratio: 485 / 333;
+    
   }
 }
 
@@ -139,6 +142,7 @@
   }
   .usual-text {
     font-size: 14px;
+    margin-inline: auto;
   }
   .game {
     padding-left: 16px;
