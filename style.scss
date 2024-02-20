@@ -1,89 +1,160 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .body {
-    background: #000915;
-    font-family: 'Montserrat', sans-serif;
+  background: #000915;
+  font-family: "Montserrat", sans-serif;
 }
 .center {
-    padding-inline: calc(50% - 599px);
+  padding-inline: calc(50% - 599px);
 }
 .main {
-    height: 1024px;
-    background-image: url(img/bg.jpg);
-    background-repeat: no-repeat;
-    padding-top: 217px;
+  height: 1024px;
+  background-image: url(img/bg.jpg);
+  background-repeat: no-repeat;
+  padding-top: 217px;
 
-    &__open {
-        margin-bottom: 16px;
-        color: #FFF;
-        font-size: 64px;
-        font-weight: 700;
-    }
-    &__text {
-        padding-top: 32px;
-        padding-bottom: 44px;
-        width: 481px;
-        color: #FFF;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 32px;
-    }
-    &__button {
-        color: #FFF;
-        font-size: 18px;
-        font-weight: 400;
-        width: 234px;
-        height: 48px;
-        border-radius: 30px;
-        background: #9C0332;
-        margin-bottom: 494px;
-        border: none;
-    }
+  &__open {
+    margin-bottom: 16px;
+    color: #FFF;
+    font-size: 64px;
+    font-weight: 700;
+  }
+}
+.usual-text {
+  padding-top: 32px;
+  padding-bottom: 44px;
+  max-width: 481px;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.red-button {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 234px;
+  width: 100%;
+  height: 48px;
+  border-radius: 30px;
+  background: #9C0332;
+  // margin-bottom: 494px;
+  border: none;
+  &:hover {
+    background: #EB443F;
+  }
 }
 
 .games {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    padding-block: 128px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding-block: 128px;
 }
 
 .game {
-    // padding-right: 32px;
-    grid-column: span 4;
+  // padding-right: 32px;
+  grid-column: span 4;
+  display: flex;
+  padding-left: 32px;
+  padding-bottom: 32px;
+  align-items: flex-end;
+  max-width: 378px;
+  width: 100%;
+  aspect-ratio: 378 / 300;
+  // height: 300px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: #FFF;
+  border-radius: 16px;
+  &:hover {
+    // border: 3px solid #44D2FF;
+    box-shadow: inset 0 0 0 3px #44D2FF;
+  }
+  &__1 {
+    background-image: url(img/game1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__2 {
+    background-image: url(img/game2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__3 {
+    background-image: url(img/game3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px 135px;
+  height: 800px;
+  &__left {
+    width: 100%;
     display: flex;
-    padding-left: 32px;
-    padding-bottom: 32px;
-    align-items: flex-end;
-    width: 378px;
-    height: 300px;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 32px;
+    flex-direction: column;
+    // align-items: center;
+    gap: 32px;
+    // text-align: center;
+    & .usual-text {
+      width: 100%;
+      padding-block: 0;
+    }
+  }
+  &__title {
     color: #FFF;
-    border-radius: 16px;
-
-    &__1 {
-        background-image: url(img/game1.png);
-        background-repeat: no-repeat;
-    }
-    &__2 {
-        background-image: url(img/game2.png);
-        background-repeat: no-repeat;
-    }
-    &__3 {
-        background-image: url(img/game3.png);
-        background-repeat: no-repeat;
-    }
+    font-size: 48px;
+    font-weight: 700;
+  }
+  &__right {
+    max-width: 485px;
+    width: 100%;
+    aspect-ratio: 485 / 333;
+    
+  }
 }
 
 @media (max-width: 1024px) {
-    .center {
-        padding-inline: calc(50% - 394px);
+  .center {
+    padding-inline: calc(50% - 394px);
+  }
+}
+@media (max-width: 767px) {
+  .center {
+    padding-inline: 16px;
+  }
+  .main {
+    text-align: center;
+    &__open {
+      font-size: 32px;
     }
+  }
+  .usual-text {
+    font-size: 14px;
+    margin-inline: auto;
+  }
+  .game {
+    padding-left: 16px;
+    // background-size: cover;
+  }
+  .block {
+    height: 654px;
+    flex-wrap: wrap;
+    
+    &__left {
+      align-items: center;
+      text-align: center;
+    }
+  }
 }
