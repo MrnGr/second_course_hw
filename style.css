@@ -101,6 +101,9 @@
   gap: 64px 135px;
   height: 800px;
 }
+.block__third {
+  background-image: url(img/bg3.svg);
+}
 .block__left {
   width: 100%;
   display: flex;
@@ -120,6 +123,12 @@
   max-width: 485px;
   width: 100%;
   aspect-ratio: 485/333;
+}
+
+.footer {
+  color: #FFF;
+  margin: 32px auto;
+  text-align: center;
 }
 
 @media (max-width: 1024px) {
