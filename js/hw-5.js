@@ -1,7 +1,9 @@
 //1
 function minNum(a, b) {
     if (a < b) {
-        return a < b ? a : b
+        return a
+    } else {
+        return b
     }
 }
 
