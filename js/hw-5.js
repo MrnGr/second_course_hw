@@ -1,9 +1,7 @@
 //1
 function minNum(a, b) {
     if (a < b) {
-        return a
-    } else {
-        return b
+        return a < b ? a : b
     }
 }
 
@@ -32,8 +30,7 @@ square(var3)
 
 //3.2
 function square(num) {
-    num = num ** 2
-    return num
+    return num ** 2
 }
 
 let var4 = Number(prompt("Введите число", 24))
