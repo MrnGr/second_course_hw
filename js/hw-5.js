@@ -26,18 +26,14 @@ function square(num) {
     console.log(num)
 }
 
-let var3 = Number(prompt("Введите число", 24))
+let var3 = Number(prompt("Введите число", "24"))
 
 square(var3)
 
 //3.2
-function square(num) {
-    return num ** 2
-}
+let var4 = Number(prompt("Введите число", "24"))
 
-let var4 = Number(prompt("Введите число", 24))
-
-console.log(square(var4))
+square(var4)
 
 //4
 function userAge(age) {
@@ -58,7 +54,8 @@ userAge(age)
 function sum(a, b) {
     if (isNaN(a) || isNaN(b)) {
         console.log("Одно или оба значения не являются числом")
-    } else if (sum = a + b) {
+    } else {
+        sum = a + b
         console.log(sum)
     }
 }

@@ -36,3 +36,25 @@ document.getElementById('game1').addEventListener('click', () => {
             alert('Такого месяца нет');
     }
 })
+
+// 11
+game2.addEventListener("click", () => {
+    let fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин']
+ 
+    fruits = fruits.sort(() => Math.random() - 0.5)
+    alert(fruits.join(', '))
+ 
+    const userFirst = prompt('Чему равнялся первый элемент массива?')
+    const userSecond = prompt('Чему равнялся последний элемент массива?')
+ 
+    const result1 = userFirst && userFirst.toLowerCase() === fruits[0].toLowerCase()
+    const result2 = userSecond && userSecond.toLowerCase() === fruits.slice(-1)[0].toLowerCase()
+ 
+    if (result1 && result2) {
+       console.log('Вы победили!')
+    } else if (result1 || result2) {
+       console.log('Так близко!')
+    } else {
+       console.log('Попробуй снова :(')
+    }
+})

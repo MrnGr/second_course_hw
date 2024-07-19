@@ -18,7 +18,7 @@ const obj = {
 
 for (const key in obj) {
     const element = obj[key];
-    console.log(`${key} — зарплата ${obj[key]} долларов`);
+    console.log(`${key} — зарплата ${element} долларов`);
 }
 
 let n = 1000
